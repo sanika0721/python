@@ -1,0 +1,37 @@
+8. Merge Two Lists
+print("\n8. Merge Two Lists")
+l1 = [1, 2, 3]
+l2 = [4, 5, 6]
+print("Merged List:", l1 + l2)
+
+# 9. Find Index of an Element
+print("\n9. Find Index")
+print("Index of 23:", lst.index(23))
+
+# 10. Sort List
+print("\n10. Sort List")
+sorted_list = sorted(lst)
+print("Sorted List:", sorted_list)
+
+# 11. Second Largest Element
+print("\n11. Second Largest Element")
+unique_list = list(set(lst))
+unique_list.sort()
+print("Second Largest:", unique_list[-2])
+
+# 12. Remove Element
+print("\n12. Remove Element")
+lst.remove(45)  # removes first occurrence
+print("After removing 45:", lst)
+
+# 13. Find Common Elements Between Two Lists
+print("\n13. Common Elements")
+a = [1, 2, 3, 4]
+b = [3, 4, 5, 6]
+common = list(set(a) & set(b))
+print("Common Elements:", common)
+
+# 14. Nested List Access
+print("\n14. Nested List Access")
+nested = [[1, 2], [3, 4], [5, 6]]
+print("Element:", nested[1][0])
