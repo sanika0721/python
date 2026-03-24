@@ -1,0 +1,21 @@
+#dictionaries
+#creating dictionaries
+
+my_dict ={
+    "name" : "sanika_j_m",
+    "student" : "AT PESCE",
+    "Dept" : "Computer Science and Engineering",   
+    "Year" : "First year"
+    }
+print(my_dict)
+
+    #Accessing dictionaries
+print(my_dict["name"])
+
+#safe accesing to dictionaries
+print(my_dict.get("degree completion year", "not found in the current dictionary")) 
+
+#adding an extra informATION TO dictionaries
+
+my_dict["degree completion year"]="2029"
+print(my_dict)

@@ -1,0 +1,22 @@
+def word_frequency(sentence):
+    # Convert sentence to lowercase and split into words
+    words = sentence.lower().split()
+    
+    freq_dict = {}
+    
+    for word in words:
+        if word in freq_dict:
+            freq_dict[word] += 1
+        else:
+            freq_dict[word] = 1
+    
+    return freq_dict
+
+
+# Example usage
+sentence = "apple banana apple orange banana apple"
+result = word_frequency(sentence)
+
+print("Word Frequency:")
+for word, count in result.items():
+    print(f"{word}: {count}")
