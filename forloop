@@ -1,0 +1,21 @@
+#FOR LOOPS
+
+for i in range(1,11):
+    print(i,end=" ")
+
+print("sum of first 10 numbers is:",sum(range(1,11)))
+
+for i in range(2,4):
+    for j in range(1,31):
+        print(f"{i}x{j}={i*j}")
+
+
+MY_BIO = "SANIKA"
+for name in MY_BIO:
+    print(name)
+
+
+sent="Python is an amazing language"
+for vowels in sent:
+        if vowels in "aeiouAEIOU":
+            print("vowels in the sentence are:",vowels)
