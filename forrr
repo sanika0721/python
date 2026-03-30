@@ -1,0 +1,40 @@
+
+
+#1️⃣ Counting Vowels in a Sentence
+# Example: Counting vowels in a sentence
+
+sentence = "Programming is fun and powerful"
+vowels = "aeiouAEIOU"
+count = 0
+
+for char in sentence:
+    if char in vowels:
+        count += 1
+
+print("The number of vowels in the sentence is:", count)
+
+
+
+#2️⃣ Calculating Average Marks of Students
+# Example: Calculating average marks of students
+
+marks = [85, 90, 78, 92, 88]
+total = 0
+
+for score in marks:
+    total += score
+
+average = total / len(marks)
+
+# Adding logic to classify performance
+if average >= 90:
+    grade = "Excellent"
+elif average >= 75:
+    grade = "Good"
+else:
+    grade = "Needs Improvement"
+
+print("Average marks:", average)
+print("Performance:", grade)
+
+
