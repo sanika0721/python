@@ -1,0 +1,26 @@
+# Dictionary storing cattle health status
+cattle_health = {
+    "Cow1": "Healthy",
+    "Cow2": "Sick",
+    "Cow3": "Healthy",
+    "Cow4": "Injured",
+    "Cow5": "Sick"
+}
+
+healthy_count = 0
+problem_count = 0
+
+print("Cattle Health Report:\n")
+
+for name, status in cattle_health.items():
+    print(name, "->", status)
+
+    if status == "Healthy":
+        healthy_count += 1
+    else:
+        problem_count += 1
+        print("⚠", name, "needs attention")
+
+print("\nSummary:")
+print("Healthy Cattle:", healthy_count)
+print("Cattle with Issues:", problem_count)
