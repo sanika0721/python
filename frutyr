@@ -1,0 +1,11 @@
+# Raw sign-up emails (with duplicates)
+signups = ["alice@mail.com", "bob@mail.com", "alice@mail.com",
+           "carol@mail.com", "bob@mail.com"]
+
+unique_users = set(signups)
+
+print("Unique subscribers:")
+for email in sorted(unique_users):
+    print(f"  → {email}")
+
+print(f"\nTotal unique: {len(unique_users)}")

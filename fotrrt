@@ -1,0 +1,13 @@
+cart = [
+    {"item": "Laptop", "price": 999.99},
+    {"item": "Mouse", "price": 29.99},
+    {"item": "Keyboard", "price": 79.99}
+]
+
+total = 0
+for product in cart:
+    discounted = product["price"] * 0.9  # 10% off
+    total += discounted
+    print(f"{product['item']}: ${discounted:.2f}")
+
+print(f"\nTotal after discount: ${total:.2f}")
