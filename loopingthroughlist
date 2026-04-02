@@ -1,0 +1,50 @@
+#looping through lists
+'''l=[21,3,23,11,16,22,1]
+total=0
+for num in l:
+    total=total+num
+    print(total)'''
+
+#doubling each number in a list
+'''l=[21,3,23,11,16,22,1]
+dl=[]
+for num in l:
+    dl.append(num*2)
+print(dl)'''
+
+#looping through dictionaries
+'''s_marks={"ELSA":85,
+         "John":90,
+         "Alice":78}
+for name in s_marks.keys():
+    print(name)
+for marks in s_marks.values():
+        print(marks)
+for name,marks in s_marks.items():
+            print(f"{name} --- {marks}")'''
+
+stu=["sam","john","alice"]
+marks=[80,90,79]
+stu_mark={}
+for index,student in enumerate(stu):
+    stu_mark[student]=marks[index]
+
+print(stu_mark)
+#another meyhod to combine two lists into dictionary
+stu=["sam","john","alice"]
+marks=[80,90,79]
+stu_mark={}
+for i in range(1,len(stu)):
+    stu_mark[stu[i]]=marks[i]
+print(stu_mark)
+
+
+marks=[80,90,79]
+stu_mark=[item*2 for item in marks]
+stu_marks=[item**2 for item in marks]
+print(stu_mark)
+print(stu_marks)
+
+
+
+
