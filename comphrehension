@@ -1,0 +1,59 @@
+# Planets
+planets = [
+    ("Zorax", 5000, {"water": 200, "gold": 50}),
+    ("Nebula", 12000, {"water": 500, "gold": 300}),
+    ("Aether", 8000, {"water": 100, "gold": 150})
+]
+
+# Creatures
+creatures = {
+    "Dragon": {"wings": 2, "fire": True, "strength": 95},
+    "Phoenix": {"wings": 2, "fire": True, "strength": 80},
+    "Unicorn": {"wings": 0, "fire": False, "strength": 70}
+}
+
+# Treasures
+treasures = [
+    ((2, 3), {"type": "gold", "value": 500}),
+    ((5, 7), {"type": "silver", "value": 200}),
+    ((1, 9), {"type": "diamond", "value": 800})
+]
+
+# Events
+events = [
+    (3021, "First colony on Mars"),
+    (1999, "Y2K panic"),
+    (2100, "AI becomes self-aware")
+]
+
+# 1. Planets with >100 gold
+rich_planets = [name for name, _, resources in planets if resources["gold"] > 100]
+
+# 2. Creature → can fly?
+can_fly = {creature: (attrs["wings"] > 0) for creature, attrs in creatures.items()}
+
+# 3. Treasures worth >300
+valuable_treasures = [coord for coord, details in treasures if details["value"] > 300]
+
+# 4. Century → events
+century_events = {}
+for year, event in events:
+    century = (year // 100 + 1) * 100
+    century_events.setdefault(century, []).append(event)
+
+# 5. Strongest creature
+strongest = max(creatures.items(), key=lambda x: x[1]["strength"])[0]
+
+# 6. Rank planets by population
+ranked_planets = sorted(planets, key=lambda x: x[1], reverse=True)
+
+# 7. Planet → total resources
+total_resources = {name: sum(resources.values()) for name, _, resources in planets}
+
+print("Rich Planets:", rich_planets)
+print("Can Fly:", can_fly)
+print("Valuable Treasures:", valuable_treasures)
+print("Century Events:", century_events)
+print("Strongest Creature:", strongest)
+print("Ranked Planets:", ranked_planets)
+print("Total Resources:", total_resources)
